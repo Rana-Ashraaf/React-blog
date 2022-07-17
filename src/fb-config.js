@@ -1,7 +1,10 @@
 // Import the functions you need from the SDKs you need
-import { initializeApp } from "firebase/app";
-import {getAuth,GoogleAuthProvider} from "firebase/auth"
-import {getFirestore} from "firebase/firestore"
+import firebase from "firebase/app";
+import "firebase/auth";
+import "firebase/firestore";
+import { initializeApp } from "@firebase/app";
+import { getAuth, GoogleAuthProvider } from "@firebase/auth";
+import { getFirestore } from "firebase/firestore";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -12,11 +15,11 @@ const firebaseConfig = {
   projectId: "blogapp-bbdb2",
   storageBucket: "blogapp-bbdb2.appspot.com",
   messagingSenderId: "419021205456",
-  appId: "1:419021205456:web:4f51e9457d632b8e8d13d5"
+  appId: "1:419021205456:web:4f51e9457d632b8e8d13d5",
 };
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
-export const db = getFirestore(app)
-export const auth = getAuth (app);
-export const provider =  new GoogleAuthProvider()
+export const db = getFirestore(app);
+export const auth = getAuth(app);
+export const provider = new GoogleAuthProvider();
